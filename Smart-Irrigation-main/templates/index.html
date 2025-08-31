@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Irrigation - Moisture Prediction</title>
+    <style>
+        /* Overall body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container styling for form content */
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            width: 350px;
+            transition: transform 0.3s;
+        }
+        
+        form:hover {
+            transform: scale(1.02);
+        }
+
+        /* Heading styling */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Label styling */
+        label {
+            color: #555;
+            font-size: 14px;
+        }
+        
+        /* Input styling */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        /* Button styling */
+        button[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+            transform: scale(1.03);
+        }
+
+        /* Result text styling */
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Ideal Moisture Prediction</h2>
+        <form id="predictForm">
+            <label>City:</label><br>
+            <input type="text" name="city" required
+            ><br><br>
+
+            <label for="State">State:</label>
+            <select name="State" id="State">
+            <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+          <option value="Ladakh">Ladakh</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Uttarakhand">Uttarakhand</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Bihar">Bihar</option>
+          <option value="West Bengal">West Bengal</option>
+          <option value="Jharkhand">Jharkhand</option>
+          </select><br><br>
+
+            <label for="crop">Select Crop:</label>
+    <select name="Crop" id="crop">
+      <option value="Wheat">Wheat</option>
+      <option value="Rice">Rice</option>
+      <option value="Maize">Maize</option>
+      <option value="Sugarcane">Sugarcane</option>
+    </select> <br><br>
+            
+    <label for="Growth Stage">Growth Stage:</label>
+    <select name="Growth Stage" id="Growth Stage">
+      <option value="Vegetative">Vegetative</option>
+      <option value="Flowering">Flowering</option>
+      <option value="Seeding">Seeding</option>
+      <option value="Maturity">Maturity</option>
+    </select><br><br>
+
+            <label for="Soil">Soil Type:</label>
+    <select name="Soil" id="Soil">
+      <option value="Desert">Desert</option>
+      <option value="Alluvial">Alluvial</option>
+      <option value="Black">Black</option>
+      <option value="Red">Red</option>
+      <option value="Laterite">Laterite</option>
+      <option value="Himalayan">Himalayan</option>
+    </select><br><br>
+
+            <button type="submit">Predict Moisture</button>
+        </form>
+
+        <h3 id="result"></h3>
+    </div>
+    
+    <script>
+        const form = document.getElementById('predictForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                document.getElementById('result').innerText = result["Predicted Ideal Moisture"]
+                    ? `Predicted Ideal Moisture: ${result["Predicted Ideal Moisture"]}`
+                    : `Error: ${result.error}`;
+            })
+            .catch(error => {
+                document.getElementById('result').innerText = `Error: ${error}`;
+            });
+        });
+    </script>
+</body>
+</html>
