@@ -1,6 +1,7 @@
 # Smart Irrigation – Complete Agriculture Solution
 ### AI-Powered Agriculture Lifecycle Management Platform
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?style=flat&logo=safari)](https://3b412425d269bf.lhr.life)
 [![Backend Tests](https://img.shields.io/badge/pytest-18%20passed-brightgreen.svg)]()
 [![Scikit-Learn](https://img.shields.io/badge/ML-LinearRegression%20Pipeline-blue.svg)]()
 [![FAO-56 Standard](https://img.shields.io/badge/Standard-FAO--56%20Penman--Monteith-emerald.svg)]()
@@ -11,6 +12,19 @@ A complete, modern, interactive, full-stack web application designed to help far
 The platform unifies **5 integrated personas**: Farmers, Retailers, Customers, Agricultural Specialists, and Administrators.
 
 ---
+
+## 🌐 Live Demo & Instant Access
+
+> 🚀 **Explore the live platform online**:
+>
+> - **Live Web Application**: [https://3b412425d269bf.lhr.life](https://3b412425d269bf.lhr.life)
+> - **Interactive Swagger / OpenAPI Docs**: [https://3b412425d269bf.lhr.life/api/v1/docs](https://3b412425d269bf.lhr.life/api/v1/docs)
+> - **Backend Health Check**: [https://3b412425d269bf.lhr.life/api/health](https://3b412425d269bf.lhr.life/api/health)
+>
+> *Use the 1-click **Quick Demo Bar** docked at the top of the browser to instantly test all 5 user roles without typing credentials!*
+
+---
+
 
 ## Key Highlights
 
