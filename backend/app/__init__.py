@@ -1,5 +1,5 @@
 import os
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 from app.config import Config, DevelopmentConfig
 from app.extensions import db, jwt, migrate, cors
 from app.routes import (
@@ -38,6 +38,19 @@ def create_app(config_class=DevelopmentConfig):
             "service": "Smart Irrigation Platform Backend",
             "version": "1.0.0"
         }), 200
+
+    # Production static file serving and SPA catch-all
+    dist_dir = app.config.get("FRONTEND_DIST_DIR")
+    if dist_dir and os.path.exists(dist_dir):
+        @app.route("/", defaults={"path": ""})
+        @app.route("/<path:path>")
+        def serve_frontend(path):
+            if path.startswith("api/"):
+                return jsonify({"error": "Endpoint not found"}), 404
+            file_path = os.path.join(dist_dir, path)
+            if path and os.path.isfile(file_path):
+                return send_from_directory(dist_dir, path)
+            return send_from_directory(dist_dir, "index.html")
 
     # Centralized Error Handlers
     @app.errorhandler(400)

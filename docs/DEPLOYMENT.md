@@ -68,28 +68,79 @@ For immediate local evaluation across all 5 roles without needing manual registr
 
 ---
 
-## 3. Production Deployment with PostgreSQL
+## 3. Cloud Deployment Options
 
-### Environment Variables
-Set the following environment variables in production:
-```ini
-FLASK_ENV=production
-SECRET_KEY=generate-a-strong-random-hex-key
-JWT_SECRET_KEY=generate-a-strong-jwt-secret-key
-DATABASE_URL=postgresql://agri_user:agri_password@postgres-host:5432/smart_irrigation_prod
-PORT=5000
-```
+### Option A: Render 1-Click Deployment (Recommended Free Cloud Hosting)
 
-### Production WSGI Server (Gunicorn)
+The repository includes a ready-to-run [render.yaml](../render.yaml) blueprint and multi-stage [Dockerfile](../Dockerfile).
+
+1. Sign up / Log in to [Render](https://render.com).
+2. Go to the **Dashboard** and click **New +** > **Blueprint**.
+3. Connect your GitHub account and select repository: `https://github.com/anupamkr2307/Smart-irrigation`.
+4. Render will detect `render.yaml` and configure:
+   - **Environment**: Docker (multi-stage build compiling React and running Python 3.12 Gunicorn).
+   - **Plan**: Free.
+   - **Auto-generated Secrets**: `SECRET_KEY` and `JWT_SECRET_KEY`.
+5. Click **Apply**.
+6. Render builds both the React client and Python backend, issuing a free live HTTPS URL (e.g. `https://smart-irrigation.onrender.com`).
+
+*(Optional)* To attach a persistent cloud PostgreSQL database on Render:
+- Go to **New +** > **PostgreSQL**.
+- Copy the **Internal Database URL** and set it as `DATABASE_URL` under your web service **Environment** tab.
+
+---
+
+### Option B: Split Deployment (Frontend on Vercel + Backend on Render)
+
+If you prefer hosting the React frontend on Vercel's global CDN:
+
+#### 1. Backend on Render
+- Deploy the backend as a Docker or Python Web Service on Render.
+- Note your live API URL: `https://your-api.onrender.com`.
+
+#### 2. Frontend on Vercel
+1. Log in to [Vercel](https://vercel.com) and click **Add New...** > **Project**.
+2. Select `https://github.com/anupamkr2307/Smart-irrigation`.
+3. In the project settings:
+   - **Root Directory**: `frontend`
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+4. Add the Environment Variable:
+   - `VITE_API_URL` = `https://your-api.onrender.com`
+5. Click **Deploy**. Vercel will deploy using `frontend/vercel.json` for seamless client-side SPA routing.
+
+---
+
+### Option C: Containerized Self-Hosted Deployment (Docker & Docker Compose)
+
+Deploy the full stack locally or on any Linux VPS (Ubuntu, Debian, AWS EC2, DigitalOcean Droplet, Linode) with Docker:
+
+#### 1. Start with Docker Compose (includes PostgreSQL)
 ```bash
-cd backend
-pip install gunicorn psycopg2-binary
-gunicorn -w 4 -b 0.0.0.0:5000 "app:create_app()"
+git clone https://github.com/anupamkr2307/Smart-irrigation.git
+cd Smart-irrigation
+
+docker compose up --build -d
+```
+The stack will build the multi-stage image, spin up PostgreSQL 16, run health checks, initialize database tables, seed test accounts, and expose the app on port `5000`.
+
+#### 2. Verify containers
+```bash
+docker compose ps
+docker compose logs -f web
+```
+Access the application at `http://localhost:5000` (or `http://your-server-ip:5000`).
+
+#### 3. Stop containers
+```bash
+docker compose down
 ```
 
-### Production Frontend Build
-```bash
-cd frontend
-npm run build
-# Deploy the generated dist/ folder to Nginx, AWS S3/CloudFront, or Vercel
-```
+---
+
+## 4. Continuous Integration & Deployment (CI/CD)
+
+The repository includes a GitHub Actions workflow in [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml):
+- **On Push to `main`**: Automatically sets up Python 3.12, installs dependencies, runs the 18 Pytest unit tests, and verifies the React Vite production build.
+

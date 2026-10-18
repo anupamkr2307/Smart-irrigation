@@ -8,11 +8,16 @@ class Config:
     JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY", "jwt-agriculture-key-2026-production")
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(days=7)
     
-    # SQLite default, PostgreSQL compatible
-    SQLALCHEMY_DATABASE_URI = os.environ.get(
+    raw_db_url = os.environ.get(
         "DATABASE_URL", f"sqlite:///{os.path.join(BASE_DIR, 'smart_irrigation.db')}"
     )
+    if raw_db_url and raw_db_url.startswith("postgres://"):
+        raw_db_url = raw_db_url.replace("postgres://", "postgresql://", 1)
+    SQLALCHEMY_DATABASE_URI = raw_db_url
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
+    PORT = int(os.environ.get("PORT", 5000))
+    FRONTEND_DIST_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "frontend", "dist"))
     
     # Upload folder
     UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
