@@ -1,0 +1,72 @@
+{
+  "model_name": "LinearRegression Irrigation Pipeline",
+  "algorithm": "Ordinary Least Squares Linear Regression",
+  "evaluation_date": "2026-10-18",
+  "train_samples": 1200,
+  "test_samples": 300,
+  "metrics": {
+    "mae": 1.7781,
+    "rmse": 2.7571,
+    "r2_score": 0.6982
+  },
+  "intercept": 4.0315,
+  "top_feature_weights": [
+    {
+      "feature": "crop_type_Rice",
+      "weight": 3.3102015040180417
+    },
+    {
+      "feature": "evapotranspiration_et0_mm",
+      "weight": 3.100338708923309
+    },
+    {
+      "feature": "crop_growth_stage_Mid-Season",
+      "weight": 2.853854258871473
+    },
+    {
+      "feature": "forecast_rainfall_mm",
+      "weight": -2.578948636534331
+    },
+    {
+      "feature": "crop_growth_stage_Initial",
+      "weight": -2.1833603477504067
+    },
+    {
+      "feature": "soil_moisture_pct",
+      "weight": -1.0313805212546867
+    },
+    {
+      "feature": "crop_type_Potato",
+      "weight": 0.9995812137373532
+    },
+    {
+      "feature": "crop_type_Wheat",
+      "weight": -0.981079413202975
+    },
+    {
+      "feature": "soil_type_clay",
+      "weight": 0.9810560959466252
+    },
+    {
+      "feature": "crop_type_Mustard",
+      "weight": -0.9701615893388685
+    }
+  ],
+  "input_features": {
+    "categorical": [
+      "soil_type",
+      "crop_type",
+      "crop_growth_stage"
+    ],
+    "numerical": [
+      "temperature_c",
+      "relative_humidity_pct",
+      "soil_moisture_pct",
+      "recent_rainfall_mm",
+      "forecast_rainfall_mm",
+      "wind_speed_ms",
+      "solar_radiation_mj",
+      "evapotranspiration_et0_mm"
+    ]
+  }
+}
