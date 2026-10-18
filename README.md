@@ -1,7 +1,7 @@
 # Smart Irrigation – Complete Agriculture Solution
 ### AI-Powered Agriculture Lifecycle Management Platform
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?style=flat&logo=safari)](https://afc75caf4e662e.lhr.life)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?style=flat&logo=safari)](https://0b57ddb8de5048.lhr.life)
 [![Backend Tests](https://img.shields.io/badge/pytest-21%20passed-brightgreen.svg)]()
 [![Scikit-Learn](https://img.shields.io/badge/ML-LinearRegression%20Pipeline-blue.svg)]()
 [![FAO-56 Standard](https://img.shields.io/badge/Standard-FAO--56%20Penman--Monteith-emerald.svg)]()
@@ -17,13 +17,14 @@ The platform unifies **5 integrated personas**: Farmers, Retailers, Customers, A
 
 > 🚀 **Explore the live platform online**:
 >
-> - **Live Web Application**: [https://afc75caf4e662e.lhr.life](https://afc75caf4e662e.lhr.life)
-> - **Multi-Role Registration Portal**: [https://afc75caf4e662e.lhr.life/register](https://afc75caf4e662e.lhr.life/register)
-> - **Interactive Swagger / OpenAPI Docs**: [https://afc75caf4e662e.lhr.life/api/v1/docs](https://afc75caf4e662e.lhr.life/api/v1/docs)
-> - **Role Capabilities Metadata**: [https://afc75caf4e662e.lhr.life/api/v1/auth/roles](https://afc75caf4e662e.lhr.life/api/v1/auth/roles)
-> - **Backend Health Check**: [https://afc75caf4e662e.lhr.life/api/health](https://afc75caf4e662e.lhr.life/api/health)
+> - **Live Web Application**: [https://0b57ddb8de5048.lhr.life](https://0b57ddb8de5048.lhr.life)
+> - **Multi-Role Registration Portal**: [https://0b57ddb8de5048.lhr.life/register](https://0b57ddb8de5048.lhr.life/register)
+> - **Interactive Swagger / OpenAPI Docs**: [https://0b57ddb8de5048.lhr.life/api/v1/docs](https://0b57ddb8de5048.lhr.life/api/v1/docs)
+> - **Role Capabilities Metadata**: [https://0b57ddb8de5048.lhr.life/api/v1/auth/roles](https://0b57ddb8de5048.lhr.life/api/v1/auth/roles)
+> - **Backend Health Check**: [https://0b57ddb8de5048.lhr.life/api/health](https://0b57ddb8de5048.lhr.life/api/health)
 >
 > *Use the 1-click **Quick Demo Bar** docked at the top of the browser to instantly test all 5 user roles without typing credentials!*
+
 
 
 
