@@ -1,7 +1,7 @@
 # Smart Irrigation – Complete Agriculture Solution
 ### AI-Powered Agriculture Lifecycle Management Platform
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?style=flat&logo=safari)](https://0b57ddb8de5048.lhr.life)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?style=flat&logo=safari)](https://ldkny-152-58-58-188.free.pinggy.net)
 [![Backend Tests](https://img.shields.io/badge/pytest-21%20passed-brightgreen.svg)]()
 [![Scikit-Learn](https://img.shields.io/badge/ML-LinearRegression%20Pipeline-blue.svg)]()
 [![FAO-56 Standard](https://img.shields.io/badge/Standard-FAO--56%20Penman--Monteith-emerald.svg)]()
@@ -17,11 +17,12 @@ The platform unifies **5 integrated personas**: Farmers, Retailers, Customers, A
 
 > 🚀 **Explore the live platform online**:
 >
-> - **Live Web Application**: [https://0b57ddb8de5048.lhr.life](https://0b57ddb8de5048.lhr.life)
-> - **Multi-Role Registration Portal**: [https://0b57ddb8de5048.lhr.life/register](https://0b57ddb8de5048.lhr.life/register)
-> - **Interactive Swagger / OpenAPI Docs**: [https://0b57ddb8de5048.lhr.life/api/v1/docs](https://0b57ddb8de5048.lhr.life/api/v1/docs)
-> - **Role Capabilities Metadata**: [https://0b57ddb8de5048.lhr.life/api/v1/auth/roles](https://0b57ddb8de5048.lhr.life/api/v1/auth/roles)
-> - **Backend Health Check**: [https://0b57ddb8de5048.lhr.life/api/health](https://0b57ddb8de5048.lhr.life/api/health)
+> - **Live Web Application**: [https://ldkny-152-58-58-188.free.pinggy.net](https://ldkny-152-58-58-188.free.pinggy.net)
+> - **Alternative Mirror**: [https://xmgsy-152-58-58-188.run.pinggy-free.link](https://xmgsy-152-58-58-188.run.pinggy-free.link)
+> - **Multi-Role Registration Portal**: [https://ldkny-152-58-58-188.free.pinggy.net/register](https://ldkny-152-58-58-188.free.pinggy.net/register)
+> - **Interactive Swagger / OpenAPI Docs**: [https://ldkny-152-58-58-188.free.pinggy.net/api/v1/docs](https://ldkny-152-58-58-188.free.pinggy.net/api/v1/docs)
+> - **Role Capabilities Metadata**: [https://ldkny-152-58-58-188.free.pinggy.net/api/v1/auth/roles](https://ldkny-152-58-58-188.free.pinggy.net/api/v1/auth/roles)
+> - **Backend Health Check**: [https://ldkny-152-58-58-188.free.pinggy.net/api/health](https://ldkny-152-58-58-188.free.pinggy.net/api/health)
 >
 > *Use the 1-click **Quick Demo Bar** docked at the top of the browser to instantly test all 5 user roles without typing credentials!*
 

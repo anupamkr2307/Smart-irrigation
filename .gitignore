@@ -34,3 +34,8 @@ backend/uploads/
 .idea/
 .DS_Store
 Thumbs.db
+
+live_link.txt
+pinggy_tunnel.py
+tunnel_runner.py
+
