@@ -36,10 +36,14 @@ export const AuthProvider = ({ children }) => {
     }
   }, [token]);
 
-  const login = async (email, password) => {
+  const login = async (email, password, targetRole = '') => {
     setLoading(true);
     try {
-      const res = await api.post('/auth/login', { email, password });
+      const payload = { email, password };
+      if (targetRole && targetRole !== 'all') {
+        payload.target_role = targetRole;
+      }
+      const res = await api.post('/auth/login', payload);
       const { access_token, user: loggedUser } = res.data;
       localStorage.setItem('agri_token', access_token);
       localStorage.setItem('agri_user', JSON.stringify(loggedUser));
@@ -49,12 +53,16 @@ export const AuthProvider = ({ children }) => {
     } catch (err) {
       return {
         success: false,
-        error: err.response?.data?.error || 'Login failed. Please check credentials.'
+        error: err.response?.data?.error || 'Login failed. Please check credentials.',
+        user_role: err.response?.data?.user_role,
+        target_role: err.response?.data?.target_role,
+        status: err.response?.status
       };
     } finally {
       setLoading(false);
     }
   };
+
 
   const register = async (userData) => {
     setLoading(true);
@@ -93,6 +101,13 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const hasPermission = (permissionName) => {
+    if (!user) return false;
+    if (user.role === 'admin') return true;
+    const permissions = user.permissions || [];
+    return permissions.includes(permissionName) || permissions.includes('all');
+  };
+
   const value = {
     user,
     token,
@@ -101,6 +116,8 @@ export const AuthProvider = ({ children }) => {
     register,
     logout,
     quickLoginAs,
+    hasPermission,
+    permissions: user?.permissions || [],
     isAuthenticated: !!user,
     isFarmer: user?.role === 'farmer',
     isRetailer: user?.role === 'retailer',
@@ -110,6 +127,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+
 };
 
 export const useAuth = () => useContext(AuthContext);

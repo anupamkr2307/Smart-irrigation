@@ -2,6 +2,47 @@ from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.extensions import db
 
+ROLE_PERMISSIONS = {
+    "farmer": [
+        "access_farmer_portal",
+        "manage_farms",
+        "calculate_irrigation",
+        "view_crop_recommendations",
+        "submit_consultations",
+        "request_quotations",
+        "browse_marketplace"
+    ],
+    "retailer": [
+        "access_retailer_portal",
+        "manage_inventory",
+        "manage_orders",
+        "respond_quotations",
+        "view_retailer_metrics"
+    ],
+    "specialist": [
+        "access_specialist_portal",
+        "review_consultations",
+        "provide_certified_advice",
+        "publish_advisories",
+        "manage_specialist_profile"
+    ],
+    "customer": [
+        "access_customer_portal",
+        "browse_marketplace",
+        "create_orders",
+        "view_order_history"
+    ],
+    "admin": [
+        "access_admin_portal",
+        "all",
+        "manage_users",
+        "verify_specialists",
+        "view_ml_analytics",
+        "view_audit_logs",
+        "system_config"
+    ]
+}
+
 class User(db.Model):
     __tablename__ = "users"
 
@@ -33,6 +74,9 @@ class User(db.Model):
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
 
+    def get_permissions(self):
+        return ROLE_PERMISSIONS.get(self.role, [])
+
     def to_dict(self):
         data = {
             "id": self.id,
@@ -40,6 +84,7 @@ class User(db.Model):
             "full_name": self.full_name,
             "phone": self.phone,
             "role": self.role,
+            "permissions": self.get_permissions(),
             "is_active": self.is_active,
             "created_at": self.created_at.isoformat() if self.created_at else None
         }
@@ -50,6 +95,7 @@ class User(db.Model):
         elif self.role == "retailer" and self.retailer_profile:
             data["profile"] = self.retailer_profile.to_dict()
         return data
+
 
 class FarmerProfile(db.Model):
     __tablename__ = "farmer_profiles"

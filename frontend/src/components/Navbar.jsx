@@ -54,6 +54,10 @@ const Navbar = () => {
               <Link to="/marketplace" className="text-slate-600 hover:text-emerald-600 font-medium text-sm transition">
                 Marketplace
               </Link>
+              <Link to="/register" className="text-slate-600 hover:text-emerald-600 font-medium text-sm transition flex items-center space-x-1">
+                <span>Role Portals</span>
+                <span className="px-1.5 py-0.2 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">5 Roles</span>
+              </Link>
               <Link to="/contact" className="text-slate-600 hover:text-emerald-600 font-medium text-sm transition">
                 Advisory & Help
               </Link>
