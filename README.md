@@ -1,7 +1,7 @@
 # Smart Irrigation – Complete Agriculture Solution
 ### AI-Powered Agriculture Lifecycle Management Platform
 
-[![Live Demo (GitHub Pages)](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages%20(Lifetime)-success?style=flat&logo=github)](https://anupamkr2307.github.io/Smart-irrigation/)
+[![Live Demo (Vercel)](smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app)](smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fanupamkr2307%2FSmart-irrigation)
 [![Backend Tests](https://img.shields.io/badge/pytest-21%20passed-brightgreen.svg)]()
 [![Scikit-Learn](https://img.shields.io/badge/ML-LinearRegression%20Pipeline-blue.svg)]()
