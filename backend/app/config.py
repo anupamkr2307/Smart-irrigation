@@ -8,9 +8,12 @@ class Config:
     JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY", "jwt-agriculture-key-2026-production")
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(days=7)
     
-    raw_db_url = os.environ.get(
-        "DATABASE_URL", f"sqlite:///{os.path.join(BASE_DIR, 'smart_irrigation.db')}"
-    )
+    if os.environ.get("VERCEL"):
+        default_db_url = "sqlite:////tmp/smart_irrigation.db"
+    else:
+        default_db_url = f"sqlite:///{os.path.join(BASE_DIR, 'smart_irrigation.db')}"
+
+    raw_db_url = os.environ.get("DATABASE_URL", default_db_url)
     if raw_db_url and raw_db_url.startswith("postgres://"):
         raw_db_url = raw_db_url.replace("postgres://", "postgresql://", 1)
     SQLALCHEMY_DATABASE_URI = raw_db_url
@@ -19,8 +22,11 @@ class Config:
     PORT = int(os.environ.get("PORT", 5000))
     FRONTEND_DIST_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "frontend", "dist"))
     
-    # Upload folder
-    UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
+    # Upload folder (use /tmp on Vercel where root filesystem is read-only)
+    if os.environ.get("VERCEL"):
+        UPLOAD_FOLDER = "/tmp/uploads"
+    else:
+        UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16 MB max upload
     
     # ML model path

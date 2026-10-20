@@ -66,6 +66,14 @@ def create_app(config_class=DevelopmentConfig):
         db.session.rollback()
         return jsonify({"error": "Internal server error"}), 500
 
+    # Ensure upload directory exists
+    upload_dir = app.config.get("UPLOAD_FOLDER")
+    if upload_dir and not os.path.exists(upload_dir):
+        try:
+            os.makedirs(upload_dir, exist_ok=True)
+        except Exception:
+            pass
+
     # Initialize tables and seed data automatically on startup
     with app.app_context():
         db.create_all()

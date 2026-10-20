@@ -26,10 +26,33 @@ The platform unifies **5 integrated personas**: Farmers, Retailers, Customers, A
 >
 > *Use the 1-click **Quick Demo Bar** docked at the top of the browser to instantly test all 5 user roles without typing credentials!*
 
-
-
-
 ---
+
+## ⚡ 1-Click Deploy to Vercel
+
+You can deploy this full-stack application directly to **Vercel** with one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fanupamkr2307%2FSmart-irrigation)
+
+### Deployment Methods:
+
+#### Option A: 1-Click GitHub Import (Recommended)
+1. Visit [vercel.com/new](https://vercel.com/new).
+2. Choose **Import Git Repository** and select `anupamkr2307/Smart-irrigation`.
+3. Keep default settings:
+   - **Framework Preset**: Vite
+   - **Root Directory**: `./` (leave default, `vercel.json` configures everything)
+4. Click **Deploy**. Vercel will build the frontend into `frontend/dist` and deploy the Python backend as Serverless Functions (`api/index.py`)!
+
+#### Option B: Deploy via Vercel CLI
+```bash
+# 1. Login to Vercel
+npx vercel login
+
+# 2. Deploy directly to production
+npx vercel --prod
+```
+
 
 
 ## Key Highlights
