@@ -23,13 +23,13 @@ The platform unifies **5 integrated personas**: Farmers, Retailers, Customers, A
 > | **GitHub Pages** | **Lifetime 100% Free** | [https://anupamkr2307.github.io/Smart-irrigation/](https://anupamkr2307.github.io/Smart-irrigation/) | `Active CI/CD` |
 > | **Vercel** | **1-Click Cloud Deploy** | [Deploy to Vercel (Free Lifetime)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fanupamkr2307%2FSmart-irrigation) | `Ready` |
 > | **Render** | **Full-Stack Cloud Web Service** | [render.yaml Blueprint](render.yaml) | `Ready` |
-> | **Active Live Tunnel** | **Interactive Live Demo** | [https://sdoqe-152-58-56-122.free.pinggy.net](https://sdoqe-152-58-56-122.free.pinggy.net) | `200 OK Online` |
-> | **Tunnel Mirror** | **Interactive Mirror** | [https://larkp-152-58-56-122.run.pinggy-free.link](https://larkp-152-58-56-122.run.pinggy-free.link) | `200 OK Online` |
+> | **Active Live Tunnel** | **Interactive Live Demo** | [https://wxchp-152-58-25-20.free.pinggy.net](https://wxchp-152-58-25-20.free.pinggy.net) | `200 OK Online` |
+> | **Tunnel Mirror** | **Interactive Mirror** | [https://olzze-152-58-25-20.run.pinggy-free.link](https://olzze-152-58-25-20.run.pinggy-free.link) | `200 OK Online` |
 >
-> - **Multi-Role Registration Portal**: [https://sdoqe-152-58-56-122.free.pinggy.net/register](https://sdoqe-152-58-56-122.free.pinggy.net/register)
-> - **Interactive Swagger / OpenAPI Docs**: [https://sdoqe-152-58-56-122.free.pinggy.net/api/v1/docs](https://sdoqe-152-58-56-122.free.pinggy.net/api/v1/docs)
-> - **Role Capabilities Metadata**: [https://sdoqe-152-58-56-122.free.pinggy.net/api/v1/auth/roles](https://sdoqe-152-58-56-122.free.pinggy.net/api/v1/auth/roles)
-> - **Backend Health Check**: [https://sdoqe-152-58-56-122.free.pinggy.net/api/health](https://sdoqe-152-58-56-122.free.pinggy.net/api/health)
+> - **Multi-Role Registration Portal**: [https://wxchp-152-58-25-20.free.pinggy.net/register](https://wxchp-152-58-25-20.free.pinggy.net/register)
+> - **Interactive Swagger / OpenAPI Docs**: [https://wxchp-152-58-25-20.free.pinggy.net/api/v1/docs](https://wxchp-152-58-25-20.free.pinggy.net/api/v1/docs)
+> - **Role Capabilities Metadata**: [https://wxchp-152-58-25-20.free.pinggy.net/api/v1/auth/roles](https://wxchp-152-58-25-20.free.pinggy.net/api/v1/auth/roles)
+> - **Backend Health Check**: [https://wxchp-152-58-25-20.free.pinggy.net/api/health](https://wxchp-152-58-25-20.free.pinggy.net/api/health)
 >
 > *Use the 1-click **Quick Demo Bar** docked at the top of the browser to instantly test all 5 user roles without typing credentials!*
 
