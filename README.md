@@ -1,7 +1,8 @@
 # Smart Irrigation – Complete Agriculture Solution
 ### AI-Powered Agriculture Lifecycle Management Platform
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?style=flat&logo=safari)](https://ldkny-152-58-58-188.free.pinggy.net)
+[![Live Demo (GitHub Pages)](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages%20(Lifetime)-success?style=flat&logo=github)](https://anupamkr2307.github.io/Smart-irrigation/)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fanupamkr2307%2FSmart-irrigation)
 [![Backend Tests](https://img.shields.io/badge/pytest-21%20passed-brightgreen.svg)]()
 [![Scikit-Learn](https://img.shields.io/badge/ML-LinearRegression%20Pipeline-blue.svg)]()
 [![FAO-56 Standard](https://img.shields.io/badge/Standard-FAO--56%20Penman--Monteith-emerald.svg)]()
@@ -13,16 +14,22 @@ The platform unifies **5 integrated personas**: Farmers, Retailers, Customers, A
 
 ---
 
-## 🌐 Live Demo & Instant Access
+## 🌐 Lifetime Live Links & Instant Access
 
 > 🚀 **Explore the live platform online**:
 >
-> - **Live Web Application**: [https://ldkny-152-58-58-188.free.pinggy.net](https://ldkny-152-58-58-188.free.pinggy.net)
-> - **Alternative Mirror**: [https://xmgsy-152-58-58-188.run.pinggy-free.link](https://xmgsy-152-58-58-188.run.pinggy-free.link)
-> - **Multi-Role Registration Portal**: [https://ldkny-152-58-58-188.free.pinggy.net/register](https://ldkny-152-58-58-188.free.pinggy.net/register)
-> - **Interactive Swagger / OpenAPI Docs**: [https://ldkny-152-58-58-188.free.pinggy.net/api/v1/docs](https://ldkny-152-58-58-188.free.pinggy.net/api/v1/docs)
-> - **Role Capabilities Metadata**: [https://ldkny-152-58-58-188.free.pinggy.net/api/v1/auth/roles](https://ldkny-152-58-58-188.free.pinggy.net/api/v1/auth/roles)
-> - **Backend Health Check**: [https://ldkny-152-58-58-188.free.pinggy.net/api/health](https://ldkny-152-58-58-188.free.pinggy.net/api/health)
+> | Platform | Deployment Type | Permanent Live Link | Status |
+> |---|---|---|---|
+> | **GitHub Pages** | **Lifetime 100% Free** | [https://anupamkr2307.github.io/Smart-irrigation/](https://anupamkr2307.github.io/Smart-irrigation/) | `Active CI/CD` |
+> | **Vercel** | **1-Click Cloud Deploy** | [Deploy to Vercel (Free Lifetime)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fanupamkr2307%2FSmart-irrigation) | `Ready` |
+> | **Render** | **Full-Stack Cloud Web Service** | [render.yaml Blueprint](render.yaml) | `Ready` |
+> | **Active Live Tunnel** | **Interactive Live Demo** | [https://sdoqe-152-58-56-122.free.pinggy.net](https://sdoqe-152-58-56-122.free.pinggy.net) | `200 OK Online` |
+> | **Tunnel Mirror** | **Interactive Mirror** | [https://larkp-152-58-56-122.run.pinggy-free.link](https://larkp-152-58-56-122.run.pinggy-free.link) | `200 OK Online` |
+>
+> - **Multi-Role Registration Portal**: [https://sdoqe-152-58-56-122.free.pinggy.net/register](https://sdoqe-152-58-56-122.free.pinggy.net/register)
+> - **Interactive Swagger / OpenAPI Docs**: [https://sdoqe-152-58-56-122.free.pinggy.net/api/v1/docs](https://sdoqe-152-58-56-122.free.pinggy.net/api/v1/docs)
+> - **Role Capabilities Metadata**: [https://sdoqe-152-58-56-122.free.pinggy.net/api/v1/auth/roles](https://sdoqe-152-58-56-122.free.pinggy.net/api/v1/auth/roles)
+> - **Backend Health Check**: [https://sdoqe-152-58-56-122.free.pinggy.net/api/health](https://sdoqe-152-58-56-122.free.pinggy.net/api/health)
 >
 > *Use the 1-click **Quick Demo Bar** docked at the top of the browser to instantly test all 5 user roles without typing credentials!*
 
