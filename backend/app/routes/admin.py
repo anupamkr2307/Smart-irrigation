@@ -1,6 +1,6 @@
 import os
 import json
-import pandas as pd
+import csv
 from flask import Blueprint, request, jsonify, current_app
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from app.extensions import db
@@ -131,11 +131,19 @@ def get_dataset_sample():
     if not os.path.exists(dataset_path):
         return jsonify({"error": "Dataset CSV file not found."}), 404
 
-    df = pd.read_csv(dataset_path)
-    sample_records = df.head(30).to_dict(orient="records")
+    with open(dataset_path, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        columns = list(reader.fieldnames or [])
+        sample_records = []
+        total_records = 0
+        for row in reader:
+            total_records += 1
+            if len(sample_records) < 30:
+                sample_records.append(row)
+
     return jsonify({
-        "total_records": len(df),
-        "columns": list(df.columns),
+        "total_records": total_records,
+        "columns": columns,
         "sample": sample_records
     }), 200
 

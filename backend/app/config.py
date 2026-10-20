@@ -30,6 +30,7 @@ class Config:
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16 MB max upload
     
     # ML model path
+    ML_WEIGHTS_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "ml", "models", "model_weights.json"))
     ML_MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "ml", "models", "irrigation_model.joblib"))
     ML_METRICS_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "ml", "models", "metrics.json"))
     DATASET_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "dataset", "irrigation_data.csv"))

@@ -93,9 +93,25 @@ def train_model():
     os.makedirs(models_dir, exist_ok=True)
     model_file = os.path.join(models_dir, "irrigation_model.joblib")
     metrics_file = os.path.join(models_dir, "metrics.json")
+    weights_file = os.path.join(models_dir, "model_weights.json")
 
     joblib.dump(pipeline, model_file)
     print(f"Trained pipeline persisted to: {model_file}")
+
+    # Export lightweight zero-dependency model weights for serverless deployments
+    num_transformer = pipeline.named_steps["preprocessor"].named_transformers_["num"]
+    weights_dict = {f: float(w) for f, w in zip(feature_names, coefficients)}
+    model_spec = {
+        "intercept": intercept,
+        "categorical_weights": weights_dict,
+        "numerical_cols": NUMERICAL_FEATURES,
+        "num_means": [float(m) for m in num_transformer.mean_],
+        "num_scales": [float(s) for s in num_transformer.scale_],
+        "num_weights": [float(weights_dict[c]) for c in NUMERICAL_FEATURES]
+    }
+    with open(weights_file, "w", encoding="utf-8") as f:
+        json.dump(model_spec, f, indent=2)
+    print(f"Lightweight model weights saved to: {weights_file}")
 
     metadata = {
         "model_name": "LinearRegression Irrigation Pipeline",

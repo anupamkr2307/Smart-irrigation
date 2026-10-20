@@ -3,8 +3,7 @@ Agricultural Water Engine
 Transparent implementation of FAO-56 Penman-Monteith, USDA-SCS effective rainfall,
 soil water balance, and unit conversions.
 """
-
-import numpy as np
+import math
 
 # Soil water holding constants
 SOIL_WATER_PROPERTIES = {
@@ -77,7 +76,7 @@ def convert_area_to_sq_meters(area_val, unit="acres"):
 
 def calculate_penman_et0(temp_mean, humidity, wind_speed=2.0, solar_rad=15.0):
     """FAO-56 reference evapotranspiration in mm/day."""
-    es = 0.6108 * np.exp((17.27 * temp_mean) / (temp_mean + 237.3))
+    es = 0.6108 * math.exp((17.27 * temp_mean) / (temp_mean + 237.3))
     ea = es * (humidity / 100.0)
     delta = (4098.0 * es) / ((temp_mean + 237.3) ** 2)
     gamma = 0.067
