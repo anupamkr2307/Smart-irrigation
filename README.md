@@ -1,7 +1,8 @@
 # Smart Irrigation – Complete Agriculture Solution
 ### AI-Powered Agriculture Lifecycle Management Platform
 
-[![Live Demo (Vercel)](smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app)](smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app)
+[![Live Demo (Vercel)](https://img.shields.io/badge/Live%20Demo-Vercel%20(Online)-success?style=flat&logo=vercel)](https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/)
+[![Live Demo (GitHub Pages)](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages%20(Lifetime)-success?style=flat&logo=github)](https://anupamkr2307.github.io/Smart-irrigation/)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fanupamkr2307%2FSmart-irrigation)
 [![Backend Tests](https://img.shields.io/badge/pytest-21%20passed-brightgreen.svg)]()
 [![Scikit-Learn](https://img.shields.io/badge/ML-LinearRegression%20Pipeline-blue.svg)]()
@@ -20,16 +21,18 @@ The platform unifies **5 integrated personas**: Farmers, Retailers, Customers, A
 >
 > | Platform | Deployment Type | Permanent Live Link | Status |
 > |---|---|---|---|
+> | **Vercel** | **Primary Cloud Deployment** | [https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/](https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/) | `Live Online` |
 > | **GitHub Pages** | **Lifetime 100% Free** | [https://anupamkr2307.github.io/Smart-irrigation/](https://anupamkr2307.github.io/Smart-irrigation/) | `Active CI/CD` |
-> | **Vercel** | **1-Click Cloud Deploy** | [Deploy to Vercel (Free Lifetime)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fanupamkr2307%2FSmart-irrigation) | `Ready` |
 > | **Render** | **Full-Stack Cloud Web Service** | [render.yaml Blueprint](render.yaml) | `Ready` |
 > | **Active Live Tunnel** | **Interactive Live Demo** | [https://wxchp-152-58-25-20.free.pinggy.net](https://wxchp-152-58-25-20.free.pinggy.net) | `200 OK Online` |
 > | **Tunnel Mirror** | **Interactive Mirror** | [https://olzze-152-58-25-20.run.pinggy-free.link](https://olzze-152-58-25-20.run.pinggy-free.link) | `200 OK Online` |
 >
-> - **Multi-Role Registration Portal**: [https://wxchp-152-58-25-20.free.pinggy.net/register](https://wxchp-152-58-25-20.free.pinggy.net/register)
-> - **Interactive Swagger / OpenAPI Docs**: [https://wxchp-152-58-25-20.free.pinggy.net/api/v1/docs](https://wxchp-152-58-25-20.free.pinggy.net/api/v1/docs)
-> - **Role Capabilities Metadata**: [https://wxchp-152-58-25-20.free.pinggy.net/api/v1/auth/roles](https://wxchp-152-58-25-20.free.pinggy.net/api/v1/auth/roles)
-> - **Backend Health Check**: [https://wxchp-152-58-25-20.free.pinggy.net/api/health](https://wxchp-152-58-25-20.free.pinggy.net/api/health)
+> - **Live Web Application**: [https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/](https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/)
+> - **Multi-Role Registration Portal**: [https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/register](https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/register)
+> - **Role-Enforced Login Portal**: [https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/login](https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/login)
+> - **Interactive Swagger / OpenAPI Docs**: [https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/api/v1/docs](https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/api/v1/docs)
+> - **Role Capabilities Metadata**: [https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/api/v1/auth/roles](https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/api/v1/auth/roles)
+> - **Backend Health Check**: [https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/api/health](https://smart-irrigation-1z31-4zfh5ytzl-anupamkr2307.vercel.app/api/health)
 >
 > *Use the 1-click **Quick Demo Bar** docked at the top of the browser to instantly test all 5 user roles without typing credentials!*
 
